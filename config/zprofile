@@ -31,9 +31,6 @@ alias python='python3'
 # Add Visual Studio Code (code)
 export PATH="/Users/jonathan.sun/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# For ece linux
-alias connectece='ssh jspsun@ecelinux4.uwaterloo.ca'
-
 # Setting PATH for Python 3.6
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
