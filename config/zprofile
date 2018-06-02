@@ -1,0 +1,41 @@
+tput bold
+tput setaf 1
+cat << "EOF"
+           _______________________________
+          | I have no clue what I'm doing |
+          /-------------------------------
+         /
+¯\_(°‿‿°)_/¯
+
+EOF
+
+export PS1="\W \$"
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# #for venv
+alias venva='source venv/bin/activate'
+alias venvm='python3 -m venv venv; source venv/bin/activate'
+alias venvd='deactivate'
+alias venvrm='rm -rf venv'
+
+# #python behavior like npm
+alias pyinstall='pip install -r requirements.txt'
+alias pyinit='pip freeze > requirements.txt'
+export NPM_TOKEN="b3249d49-63ca-4aba-bb48-0a531de0df25"
+export NODE_ENV="local"
+
+alias python='python3'
+
+# Add Visual Studio Code (code)
+export PATH="/Users/jonathan.sun/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# For ece linux
+alias connectece='ssh jspsun@ecelinux4.uwaterloo.ca'
+
+# Setting PATH for Python 3.6
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:${PATH}"
+export PATH
