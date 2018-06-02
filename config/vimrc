@@ -1,3 +1,4 @@
+colorscheme Base2Tone_SeaDark
+
 syntax enable
 set background=dark
-colorscheme Base2Tone_SeaDark
