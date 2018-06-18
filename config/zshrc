@@ -51,7 +51,7 @@ function pushece() {
 ## fetches all code from remote dir and copies to current dir
 ## ex: pullece remoteDir
 function pullece() {
-  scp -r ./ jspsun@ecelinux4.uwaterloo.ca:$1/. ./
+  scp -r jspsun@ecelinux4.uwaterloo.ca:$1/. ./
 }
 
 #export NVM_DIR="$HOME/.nvm"
