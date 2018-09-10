@@ -6,3 +6,7 @@
 	name = Jonathan Sun
 [alias]
 	co = checkout
+[color]
+	ui = true
+[push]
+	default = simple
