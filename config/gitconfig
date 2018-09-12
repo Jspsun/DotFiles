@@ -2,11 +2,14 @@
 [user]
 # Please adapt and uncomment the following lines:
 #	name = Jonathan Sun
-	email = Jspsun@gmail.com
+	email = jonathan.sun@coinbase.com
 	name = Jonathan Sun
 [alias]
 	co = checkout
+	br = branch
 [color]
 	ui = true
 [push]
 	default = simple
+[pager]
+	branch = false

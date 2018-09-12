@@ -29,10 +29,13 @@ export NODE_ENV="local"
 alias python='python3'
 
 # Add Visual Studio Code (code)
-export PATH="/Users/jonathan.sun/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/Users/$(whoami)/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Setting PATH for Python 3.6
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:${PATH}"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH
