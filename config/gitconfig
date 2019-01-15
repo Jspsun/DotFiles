@@ -6,3 +6,6 @@
 	name = Jonathan Sun
 [alias]
 	co = checkout
+	br = branch
+[pager]
+	branch = false
