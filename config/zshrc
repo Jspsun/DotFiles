@@ -5,7 +5,7 @@ export PS1="\W \$"
 
  #Path to your oh-my-zsh installation.
 export PATH=~/Library/Python/2.7/bin:$PATH
-export ZSH=/Users/sujonat/.oh-my-zsh
+export ZSH=/Users/$USER/.oh-my-zsh
 
 
 #Set name of the theme to load. Optionally, if you set this to "random"

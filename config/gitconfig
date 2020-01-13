@@ -10,4 +10,4 @@
 [pager]
 	branch = false
 [core]
-	excludesfile = /Users/sujonat/.gitignore_global
+	excludesfile = /Users/$USER/.gitignore_global
