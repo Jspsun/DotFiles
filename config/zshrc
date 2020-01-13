@@ -55,6 +55,7 @@ alias samDeploy='./sam package && ./sam deploy'
 alias samIntegrationTests='brazil-build sam-integ-tests'
 
 alias gitSync='git fetch && git rebase origin/mainline'
+alias sshpi='ssh pi@192.168.1.16'
 
 ## copies all code in current dir to remote dir
 ## ex: pushece remoteDir
@@ -83,3 +84,8 @@ export PATH=$PATH:${HOME}/.toolbox/bin
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
 PATH=$HOME/bin:$PATH
+
+# cleanup any upstream branches from that repo that have been merged
+function gitcleanupbr(){
+  git fetch -p && for branch in `git branch -vv --no-color | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+}
