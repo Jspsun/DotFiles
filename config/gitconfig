@@ -2,10 +2,12 @@
 [user]
 # Please adapt and uncomment the following lines:
 #	name = Jonathan Sun
-	email = Jspsun@gmail.com
-	name = Jonathan Sun
+	email = sujonat@twitch.tv
+	name = sujonat
 [alias]
 	co = checkout
 	br = branch
 [pager]
 	branch = false
+[core]
+	excludesfile = /Users/sujonat/.gitignore_global

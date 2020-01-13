@@ -26,7 +26,7 @@ alias pyinit='pip freeze > requirements.txt'
 export NPM_TOKEN="b3249d49-63ca-4aba-bb48-0a531de0df25"
 export NODE_ENV="local"
 
-alias python='python3'
+# alias python='python3'
 
 # Add Visual Studio Code (code)
 export PATH="/Users/jonathan.sun/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
