@@ -1,3 +1,4 @@
+# a bit of ascii art
 tput bold
 tput setaf 1
 cat << "EOF"
@@ -9,12 +10,11 @@ cat << "EOF"
 
 EOF
 
-export PS1="\W \$"
-
+# show/hide hidden files (dotfiles)
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-# #for venv
+# python macros that make it easier to work with virtual enviroments
 alias venva='source venv/bin/activate'
 alias venvm='python3 -m venv venv; source venv/bin/activate'
 alias venvd='deactivate'
@@ -33,6 +33,6 @@ export PATH="/Users/$USER/Library/Python/2.7/bin:/usr/local/bin:/usr/bin:/bin:/u
 
 # Setting PATH for Python 3.6
 # The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+# PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:${PATH}"
 export PATH

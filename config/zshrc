@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PS1="\W \$"
-
  #Path to your oh-my-zsh installation.
 export PATH=~/Library/Python/2.7/bin:$PATH
 export ZSH=/Users/$USER/.oh-my-zsh
@@ -45,14 +43,16 @@ source $ZSH/oh-my-zsh.sh
 alias sshece='ssh jspsun@ecelinux4.uwaterloo.ca'
 
 alias refreshAWSPersonalCredentials='ada credentials update --account=751595011055 --provider=isengard --role=admin'
-alias refreshAWSS2SCredentials='ada credentials update --account=289423984879 --provider=isengard --role=admin'
+alias refreshAWSS2SCredentials='ada credentials update --account=986320826019 --provider=isengard --role=admin'
 alias refreshAWSSSECredentials='ada credentials update --account=854594403332 --provider=isengard --role=admin'
 alias refreshBeholderCredentials='ada credentials update --account=840037604315 --provider=isengard --role=admin'
+alias refreshBeefcakerCredentials='ada credentials update --account=396837686523 --provider=isengard --role=admin'
 
 alias testCoverage='cat ./build/generated-make/coverage-data.txt'
 
 alias samDeploy='./sam package && ./sam deploy'
 alias samIntegrationTests='brazil-build sam-integ-tests'
+alias localIntegration='brazil-build local-integration'
 
 alias gitSync='git fetch && git rebase origin/mainline'
 alias sshpi='ssh pi@192.168.1.16'

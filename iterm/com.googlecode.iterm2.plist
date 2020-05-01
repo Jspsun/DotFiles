@@ -6,6 +6,8 @@
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -685,10 +687,6 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/Dev/DotFiles/iterm</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -731,11 +729,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>490 303 700 622 0 0 1680 1027 </string>
-	<key>NSWindow Frame SharedPreferences</key>
-	<string>-2317 248 796 486 -2560 -152 2560 1417 </string>
+	<string>-2030 768 620 392 -3440 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 444 1440 428 0 0 1440 877 </string>
+	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2215,26 +2211,22 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.2.8</string>
-		<string>3.3.2</string>
+		<string>3.3.7</string>
+		<string>3.3.8</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1920, 1080}}</string>
+		<string>{{0, 0}, {0, 0}}</string>
 		<key>topLeft</key>
-		<string>{638, 845}</string>
+		<string>{-2042, 1115}</string>
 	</dict>
-	<key>NoSyncHaveRequestedFullDiskAccess</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
-	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>07106961-D818-4178-9064-EF304BCD8797</string>
+	<string>03DAD201-7C8F-4F59-8DC4-268C4A1FF91D</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>1</integer>
+	<integer>9</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>589348282.767169</real>
+	<real>601410778.38801301</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
@@ -2728,7 +2720,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession</string>
+				<string>currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2742,9 +2734,17 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.terminalIconName</string>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2753,6 +2753,14 @@
 				<true/>
 				<key>name</key>
 				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.terminalIconName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2769,6 +2777,14 @@
 				<true/>
 				<key>name</key>
 				<string>iterm2.localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2854,11 +2870,11 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
+				<false/>
 				<key>name</key>
-				<string>currentSession.path</string>
+				<string>iterm2</string>
 				<key>nonterminalContext</key>
-				<integer>0</integer>
+				<integer>4</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -2878,17 +2894,17 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<false/>
+				<true/>
 				<key>name</key>
-				<string>iterm2</string>
+				<string>currentSession.path</string>
 				<key>nonterminalContext</key>
-				<integer>4</integer>
+				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.terminalWindowName</string>
+				<string>currentSession.pid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2902,19 +2918,19 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.pid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -2945,8 +2961,8 @@
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>579117800.38600504</real>
+	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
+	<real>600727889.94341397</real>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PointerActions</key>
@@ -2983,7 +2999,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/sujonat/Dev/DotFiles/iterm</string>
+	<string>/Users/sujonat/dev/DotFiles/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -2993,15 +3009,13 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=30</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=48</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-05-09T18:19:29Z</date>
+	<date>2020-02-18T18:01:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -3033,7 +3047,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.9</string>
+	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

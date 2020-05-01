@@ -10,4 +10,5 @@
 [pager]
 	branch = false
 [core]
-	excludesfile = /Users/$USER/.gitignore_global
+	excludesFile = /Users/sujonat/.gitignore
+	autocrlf = input
