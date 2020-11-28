@@ -2,8 +2,8 @@
 [user]
 # Please adapt and uncomment the following lines:
 #	name = Jonathan Sun
-	email = sujonat@twitch.tv
-	name = sujonat
+	email = JSPSUN@uwaterloo.ca
+	name = JONATHAN SUN
 [alias]
 	co = checkout
 	br = branch
@@ -11,3 +11,7 @@
 	branch = false
 [core]
 	excludesfile = /Users/$USER/.gitignore_global
+[push]
+	default = simple
+[color]
+	ui = true
