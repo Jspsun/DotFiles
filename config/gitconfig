@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Jonathan Sun
-	email = jspsun@gmail.com
+	email = Jspsun@gmail.com
 [alias]
 	co = checkout
 	br = branch
