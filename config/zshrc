@@ -1,98 +1,31 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PS1="\W \$"
 
- #Path to your oh-my-zsh installation.
-export PATH=~/Library/Python/2.7/bin:$PATH
 export ZSH=/Users/$USER/.oh-my-zsh
 
 
-#Set name of the theme to load. Optionally, if you set this to "random"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
-# source ~/.bashrc-twinit
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# ssh into ece linux
-alias sshece='ssh jspsun@ecelinux4.uwaterloo.ca'
-
-alias refreshAWSPersonalCredentials='ada credentials update --account=751595011055 --provider=isengard --role=admin'
-alias refreshAWSS2SCredentials='ada credentials update --account=289423984879 --provider=isengard --role=admin'
-alias refreshAWSSSECredentials='ada credentials update --account=854594403332 --provider=isengard --role=admin'
-alias refreshBeholderCredentials='ada credentials update --account=840037604315 --provider=isengard --role=admin'
-
-alias testCoverage='cat ./build/generated-make/coverage-data.txt'
-
-alias samDeploy='./sam package && ./sam deploy'
-alias samIntegrationTests='brazil-build sam-integ-tests'
-
-alias gitSync='git fetch && git rebase origin/mainline'
-alias sshpi='ssh pi@192.168.1.16'
-
-## copies all code in current dir to remote dir
-## ex: pushece remoteDir
-function pushece() {
-  scp -r ./ jspsun@ecelinux4.uwaterloo.ca:$1
-}
-
-## fetches all code from remote dir and copies to current dir
-## ex: pullece remoteDir
-function pullece() {
-  scp -r jspsun@ecelinux4.uwaterloo.ca:$1/. ./
-}
-
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#path for go
-# export PATH=$PATH:/usr/local/go/bin
-export GOPATH=${HOME}/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH=$PATH:${GOPATH}/bin
-
-export PATH=$PATH:${HOME}/.toolbox/bin
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
-PATH=$HOME/bin:$PATH
 
 # cleanup any local and upstream branches from that repo that have been merged
 function gitCleanBr(){
   git checkout master && git fetch -p && for branch in `git branch -vv --no-color | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
 }
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-export PATH=/opt/X11/bin:$PATH
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+export PATH="$HOME/.local/bin:$PATH"
